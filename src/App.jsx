@@ -15,7 +15,7 @@ class App extends React.Component {
 
   componentDidMount = () => {
     const start = init();
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera, cube } = start;
     this.setState({
